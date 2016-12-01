@@ -13,5 +13,31 @@ namespace FoodList
         {
 
         }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            // start a user store, user manager, user variables
+            var userStore = new UserStore<IdentityUser>();
+            var userManager = new UserManager<IdentityUser>(userStore);
+
+            // find the user with credentials
+            var user = userManager.Find(txtUsername.Text, txtPassword.Text);
+
+            // iff user is foud make a cookie
+            if (user != null)
+            {
+                var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+                var userIdentity = userManager.CreateIdentity(user, DefaultAuathenticationTypes.ApplicationCookie);
+                authenticationManager.SignIn(new Microsoft.Owin.Security.AuthenticationProperties()
+                { IsPersistent = false }, userIdentity);
+                {
+                    else
+                    {
+                        lblMessage.Text = "Invalid Login";
+                        lblMessage.CssClass = "alert alert-danger col-sm-offset-3";
+                    }
+                }
+            }
+        }
     }
 }
