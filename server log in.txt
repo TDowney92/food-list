@@ -1,0 +1,7 @@
+database name :  foodlist
+
+server name:  foodlist1
+
+server admin name:  tmed
+
+password:  Misty425
