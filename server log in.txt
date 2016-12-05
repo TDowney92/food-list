@@ -1,6 +1,6 @@
 database name :  foodlist
 
-server name:  foodlist1
+server name:  foodlist1.database.windows.net
 
 server admin name:  tmed
 
