@@ -96,6 +96,8 @@
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -115,10 +117,27 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="data.aspx" />
+    <Content Include="foodlistModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>foodlistModel.edmx</DependentUpon>
+      <LastGenOutput>foodlistModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="foodlistModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>foodlistModel.edmx</DependentUpon>
+      <LastGenOutput>foodlistModel.cs</LastGenOutput>
+    </Content>
     <Content Include="logout.aspx" />
     <Content Include="main.css" />
     <Content Include="packages.config" />
     <Content Include="Site1.Master" />
+    <EntityDeploy Include="foodlistModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>foodlistModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="foodlistModel.edmx.diagram">
+      <DependentUpon>foodlistModel.edmx</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -164,6 +183,21 @@
     <Compile Include="edit.aspx.designer.cs">
       <DependentUpon>edit.aspx</DependentUpon>
     </Compile>
+    <Compile Include="foodlistModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>foodlistModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="foodlistModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>foodlistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="foodlistModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>foodlistModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="list.aspx.cs">
       <DependentUpon>list.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -200,6 +234,15 @@
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
+    <Compile Include="sysdac_history_internal.cs">
+      <DependentUpon>foodlistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdac_instances_internal.cs">
+      <DependentUpon>foodlistModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
