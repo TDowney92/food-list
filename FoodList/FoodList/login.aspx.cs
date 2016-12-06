@@ -5,6 +5,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
+// identitiy refernces
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin.Security.Cookies;
 namespace FoodList
 {
     public partial class login : System.Web.UI.Page
@@ -27,16 +32,11 @@ namespace FoodList
             if (user != null)
             {
                 var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
-                var userIdentity = userManager.CreateIdentity(user, DefaultAuathenticationTypes.ApplicationCookie);
+                var userIdentity = userManager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
                 authenticationManager.SignIn(new Microsoft.Owin.Security.AuthenticationProperties()
                 { IsPersistent = false }, userIdentity);
-                {
-                    else
-                    {
-                        lblMessage.Text = "Invalid Login";
-                        lblMessage.CssClass = "alert alert-danger col-sm-offset-3";
-                    }
-                }
+
+                Response.Redirect("list.aspx");
             }
         }
     }

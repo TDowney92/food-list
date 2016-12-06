@@ -8,32 +8,37 @@ using System.Web.UI.WebControls;
 
 // identity refence
 using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EnityFramework;
+using Microsoft.AspNet.Identity.EntityFramework;
 namespace FoodList
 {
     public partial class register : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+        }
+
+        protected void btnRegister_Click(object sender, EventArgs e)
+        {
             // use default connection in web.config
             var userStore = new UserStore<IdentityUser>();
-            var manger = new UserManger<IdentityUser>(userStore);
+            var manger = new UserManager<IdentityUser>(userStore);
             // populate from register
             var user = new IdentityUser()
             {
-                textUsername = txtUsername.Text
+                UserName = textUsername.Text
             };
             // save the user
-            IdentityResut result = manger.Create(user, txtPassword.Text);
+            IdentityResult result = manger.Create(user, txtPassword.Text);
             // evaluate the result
-            if (result.Secceeded)
+            if (result.Succeeded)
             {
                 Response.Redirect("login.aspx");
             }
             else
             {
-                lblMessage.Text = result.errors.firstordefault();
-                lblMessage.cssclasss = "alert alert-danger";
+                lblMessage.Text = result.Errors.FirstOrDefault();
+                lblMessage.CssClass = "alert alert-danger";
             }
         }
     }

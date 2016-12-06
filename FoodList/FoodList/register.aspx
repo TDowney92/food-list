@@ -4,14 +4,14 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1> Register </h1>
     <div class="form-group">
-        <asp:lable id="lblMessage" runat="server" cssclass="alert alert-info col-sm-offset-5" text="Please create an account " />
+        <asp:Label id="lblMessage" runat="server" cssclass="alert alert-info col-sm-offset-5" text="Please create an account " />
     </div>
     <div class="form-group">
-        <lable for="txtUsername" class="control-label col-sm-4">Username:</lable>
+        <label for="txtUsername" class="control-label col-sm-4">Username:</label>
         <asp:TextBox ID="textUsername" runat="server" required />
     </div>
     <div class="form-group">
-        <lable for="txtPassword" class="control-label col-sm-4">Password:</lable>
+        <label for="txtPassword" class="control-label col-sm-4">Password:</label>
         <asp:TextBox ID="txtPassword" runat="server" required TextMode="Password" />
     </div>
     <div class="form-group">

@@ -12,6 +12,7 @@
     </div>
     <div class="form-group">
         <label for="txtPassword"  class="control-label col-sm-3">Password:</label>
+        <asp:TextBox ID="txtPassword" runat="server" required />
     </div>
     <asp:Button ID="btbnLogin" runat="server" CssClass="btn btn-success col-sm-offset-3" Text="login" OnClick="btnLogin_Click" />
 </asp:Content>
