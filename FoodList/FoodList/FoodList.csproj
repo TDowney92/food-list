@@ -117,6 +117,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="data.aspx" />
+    <Content Include="foodlist-details.aspx" />
     <Content Include="foodlistModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>foodlistModel.edmx</DependentUpon>
@@ -182,6 +183,13 @@
     </Compile>
     <Compile Include="edit.aspx.designer.cs">
       <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="foodlist-details.aspx.cs">
+      <DependentUpon>foodlist-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="foodlist-details.aspx.designer.cs">
+      <DependentUpon>foodlist-details.aspx</DependentUpon>
     </Compile>
     <Compile Include="foodlistModel.Context.cs">
       <AutoGen>True</AutoGen>

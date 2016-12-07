@@ -1,4 +1,31 @@
 ﻿body {
-    padding-left:250px;
-    padding-right:250px;
+    background: darkgrey;
+}
+
+.jumbotron {
+    background: lightblue;
+}
+
+
+.jumbotron h1 {
+    padding: 20px;
+    font-family: Century;
+    color: black;
+}
+
+.jumbotron {
+    padding:20px;
+    font-size: 1.3em;
+    font-family: Century;
+    border: solid black 2px;
+}
+
+ul {
+    padding: 20px;
+    font-family: Century;
+    font-size: 1.3em;
+}
+
+navbar-header {
+    font-family: Century;
 }
