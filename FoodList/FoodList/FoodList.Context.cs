@@ -13,10 +13,10 @@ namespace FoodList
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class masterEntities : DbContext
+    public partial class foodlistEntities : DbContext
     {
-        public masterEntities()
-            : base("name=masterEntities")
+        public foodlistEntities()
+            : base("name=foodlistEntities")
         {
         }
     
@@ -25,7 +25,10 @@ namespace FoodList
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<sysdac_history_internal> sysdac_history_internal { get; set; }
-        public virtual DbSet<sysdac_instances_internal> sysdac_instances_internal { get; set; }
+        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
+        public virtual DbSet<AspNetRole> AspNetRoles { get; set; }
+        public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
+        public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
+        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
     }
 }

@@ -12,15 +12,12 @@ namespace FoodList
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdac_instances_internal
+    public partial class AspNetUserLogin
     {
-        public System.Guid instance_id { get; set; }
-        public string instance_name { get; set; }
-        public string type_name { get; set; }
-        public string type_version { get; set; }
-        public string description { get; set; }
-        public byte[] type_stream { get; set; }
-        public System.DateTime date_created { get; set; }
-        public string created_by { get; set; }
+        public string LoginProvider { get; set; }
+        public string ProviderKey { get; set; }
+        public string UserId { get; set; }
+    
+        public virtual AspNetUser AspNetUser { get; set; }
     }
 }

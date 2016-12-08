@@ -118,26 +118,26 @@
   <ItemGroup>
     <Content Include="data.aspx" />
     <Content Include="foodlist-details.aspx" />
-    <Content Include="foodlistModel.Context.tt">
+    <Content Include="FoodList.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>foodlistModel.edmx</DependentUpon>
-      <LastGenOutput>foodlistModel.Context.cs</LastGenOutput>
+      <DependentUpon>FoodList.edmx</DependentUpon>
+      <LastGenOutput>FoodList.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="foodlistModel.tt">
+    <Content Include="FoodList.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>foodlistModel.edmx</DependentUpon>
-      <LastGenOutput>foodlistModel.cs</LastGenOutput>
+      <DependentUpon>FoodList.edmx</DependentUpon>
+      <LastGenOutput>FoodList.cs</LastGenOutput>
     </Content>
     <Content Include="logout.aspx" />
     <Content Include="main.css" />
     <Content Include="packages.config" />
     <Content Include="Site1.Master" />
-    <EntityDeploy Include="foodlistModel.edmx">
+    <EntityDeploy Include="FoodList.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>foodlistModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>FoodList.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="foodlistModel.edmx.diagram">
-      <DependentUpon>foodlistModel.edmx</DependentUpon>
+    <Content Include="FoodList.edmx.diagram">
+      <DependentUpon>FoodList.edmx</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -162,6 +162,21 @@
     </Compile>
     <Compile Include="add.aspx.designer.cs">
       <DependentUpon>add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetRole.cs">
+      <DependentUpon>FoodList.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUser.cs">
+      <DependentUpon>FoodList.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserClaim.cs">
+      <DependentUpon>FoodList.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserLogin.cs">
+      <DependentUpon>FoodList.tt</DependentUpon>
+    </Compile>
+    <Compile Include="C__MigrationHistory.cs">
+      <DependentUpon>FoodList.tt</DependentUpon>
     </Compile>
     <Compile Include="data.aspx.cs">
       <DependentUpon>data.aspx</DependentUpon>
@@ -191,20 +206,20 @@
     <Compile Include="foodlist-details.aspx.designer.cs">
       <DependentUpon>foodlist-details.aspx</DependentUpon>
     </Compile>
-    <Compile Include="foodlistModel.Context.cs">
+    <Compile Include="FoodList.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>foodlistModel.Context.tt</DependentUpon>
+      <DependentUpon>FoodList.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="foodlistModel.cs">
+    <Compile Include="FoodList.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>foodlistModel.tt</DependentUpon>
+      <DependentUpon>FoodList.tt</DependentUpon>
     </Compile>
-    <Compile Include="foodlistModel.Designer.cs">
+    <Compile Include="FoodList.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>foodlistModel.edmx</DependentUpon>
+      <DependentUpon>FoodList.edmx</DependentUpon>
     </Compile>
     <Compile Include="list.aspx.cs">
       <DependentUpon>list.aspx</DependentUpon>
@@ -243,12 +258,6 @@
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
-    <Compile Include="sysdac_history_internal.cs">
-      <DependentUpon>foodlistModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdac_instances_internal.cs">
-      <DependentUpon>foodlistModel.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
