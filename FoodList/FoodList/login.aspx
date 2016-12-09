@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Log In</h1>
     <div class="form-group">
-        <asp:Label ID="lblMessage" runat="server" CssClass="alert alert-info col-sm-offset-4" Text="Enter your Login info" />
+        <asp:Label ID="lblMessage" runat="server" Text="Enter your Login info" />
     </div>
     <div class="form-group">
         <label for="txtUsername" class="control-label col-sm-3">Username:</label>

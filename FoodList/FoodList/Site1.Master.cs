@@ -11,7 +11,14 @@ namespace FoodList
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
 
+            }
+            catch (Exception error)
+            {
+                Response.Redirect("/.404.aspx");
+            }
         }
     }
 }

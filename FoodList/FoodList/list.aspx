@@ -4,9 +4,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>The Fridge List</h1>
     <a href="foodlist-details.aspx">Add a food item</a>
-    <asp:GridView ID="grdFoodItem" runat="server" CssClass="table table-striped" AutoGenerateColumns="false" DataKeyNames="FoodItemID" OnRowDeleting="grdFoodItem_RowDeleting">
+    <asp:GridView ID="grdFoodList" runat="server" CssClass="table table-striped" AutoGenerateColumns="false" DataKeyNames="FoodListID" OnRowDeleting="grdItem_RowDeleting" >
         <Columns>
-            <asp:BoundField DataField="FoodItemID" HeaderText="ID" />
+            <asp:BoundField DataField="FoodListID" HeaderText="ID" />
             <asp:BoundField DataField="Name" HeaderText="Food Name" />
             <asp:BoundField DataField="Amount" HeaderText="Amount" DataFormatString="{0:c}" />
             <asp:HyperLinkField HeaderText="Edit" Text="Edit" NavigateUrl="~/foodlist-details.aspx" DataNavigateUrlFields="FoodItemID" DataNavigateUrlFormatString="/foodlist-details.aspx?FoodItemID={0}" />

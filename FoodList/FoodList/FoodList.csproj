@@ -116,7 +116,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="404.aspx" />
     <Content Include="data.aspx" />
+    <Content Include="error.aspx" />
     <Content Include="foodlist-details.aspx" />
     <Content Include="FoodList.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -156,6 +158,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
     <Compile Include="add.aspx.cs">
       <DependentUpon>add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -198,6 +207,13 @@
     </Compile>
     <Compile Include="edit.aspx.designer.cs">
       <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="error.aspx.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="error.aspx.designer.cs">
+      <DependentUpon>error.aspx</DependentUpon>
     </Compile>
     <Compile Include="foodlist-details.aspx.cs">
       <DependentUpon>foodlist-details.aspx</DependentUpon>

@@ -12,6 +12,11 @@ namespace FoodList
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            // log out the user
+            var AuthenticationManger =
+                HttpContext.Current.GetOwinContext().Authentication;
+            AuthenticationManger.SignOut();
+            Response.Redirect("login.aspx");
         }
     }
 }
