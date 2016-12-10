@@ -1,5 +1,7 @@
 ﻿body {
     background: darkgrey;
+    padding-left: 75px;
+    padding-right: 75px;
 }
 
 .jumbotron {
@@ -28,4 +30,14 @@ ul {
 
 navbar-header {
     font-family: Century;
+}
+
+.from-control-inline {
+    min-width: 0;
+    width: auto;
+    background-color: lightblue;
+}
+
+.btn btn-success {
+    padding: 10px;
 }
