@@ -26,8 +26,7 @@
                             <li><a href="login.aspx">Login |</a></li>
                             <li><a href="register.aspx">Register |</a></li>
                             <li><a href="list.aspx">Food List |</a></li>
-                            <li><a href="add.aspx">Add Items |</a></li>
-                            <li><a href="edit.aspx">Edit Items |</a></li>
+                            <li><a href="foodlist-details.aspx">Add Items |</a></li>
                         </ul>
                     </div> <!-- end of navbar collapse -->
                 </div><!-- end of navbar header -->
