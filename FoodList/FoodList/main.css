@@ -1,7 +1,9 @@
 ﻿body {
     background: darkgrey;
-    padding-left: 75px;
-    padding-right: 75px;
+}
+
+footer {
+    position: sticky;
 }
 
 .jumbotron {
@@ -28,6 +30,10 @@ ul {
     font-size: 1.3em;
 }
 
+ul: hover {
+    border-bottom: solid 2px red;
+}
+
 navbar-header {
     font-family: Century;
 }
@@ -38,6 +44,14 @@ navbar-header {
     background-color: lightblue;
 }
 
+form {
+    font-family: Century;
+}
+
 .btn btn-success {
     padding: 10px;
+}
+
+.navbar-inverse {
+    color: white;
 }
