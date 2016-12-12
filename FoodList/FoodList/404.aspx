@@ -4,6 +4,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="jumbotron"
         <h1>Oh no...</h1>
-        <p>Hey sorry about this eror, we will fix it as soon as possible.</p>
+            <p>Hey sorry about this eror, we will fix it as soon as possible.</p>
      </div>
 </asp:Content>

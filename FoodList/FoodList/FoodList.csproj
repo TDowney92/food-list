@@ -149,9 +149,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="add.aspx" />
     <Content Include="default.aspx" />
-    <Content Include="edit.aspx" />
     <Content Include="list.aspx" />
     <Content Include="login.aspx" />
     <Content Include="register.aspx" />
@@ -164,13 +162,6 @@
     </Compile>
     <Compile Include="404.aspx.designer.cs">
       <DependentUpon>404.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="add.aspx.cs">
-      <DependentUpon>add.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="add.aspx.designer.cs">
-      <DependentUpon>add.aspx</DependentUpon>
     </Compile>
     <Compile Include="AspNetRole.cs">
       <DependentUpon>foodlistEntities.tt</DependentUpon>
@@ -200,13 +191,6 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="edit.aspx.cs">
-      <DependentUpon>edit.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="edit.aspx.designer.cs">
-      <DependentUpon>edit.aspx</DependentUpon>
     </Compile>
     <Compile Include="error.aspx.cs">
       <DependentUpon>error.aspx</DependentUpon>

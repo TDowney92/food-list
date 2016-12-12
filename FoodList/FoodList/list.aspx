@@ -3,7 +3,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>The Fridge List</h1>
-    <a href="foodlist-details.aspx">Add a food item</a>
         <asp:GridView ID="grdFoodList" runat="server" CssClass="table table-striped" AutoGenerateColumns="false" DataKeyNames="FoodListID" OnRowDeleting="grdItem_RowDeleting">
         <Columns>
             <asp:BoundField DataField="FoodListID" HeaderText="ID" />
